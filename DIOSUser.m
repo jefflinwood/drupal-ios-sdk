@@ -66,7 +66,9 @@
     [self addParam:userDict forKey:@"data"];
     [self addParam:[userDict objectForKey:@"uid"] forKey:@"uid"];
   } else {
-    [self addParam:userDict forKey:@"account"];
+      [self addParam:[userDict objectForKey:@"name"] forKey:@"name"];
+      [self addParam:[userDict objectForKey:@"mail"] forKey:@"mail"];
+      [self addParam:[userDict objectForKey:@"pass"] forKey:@"pass"];
   }
   
   [self runMethod];
